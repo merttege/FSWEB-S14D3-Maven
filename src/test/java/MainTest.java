@@ -41,9 +41,9 @@ public class MainTest {
         holden = new Holden(4, "Holden");
         ford = new Ford(4, "Ford");
         carSkeleton = new CarSkeleton("Test", "test");
-        electricCar = new ElectricCar("Test", "test", 10, 5);
-        gasPoweredCar = new GasPoweredCar("Test", "test", 10, 4);
-        hybridCar = new HybridCar("Test", "test", 10, 5, 4);
+        electricCar = new ElectricCar(10, 5, "Test", "Test");
+        gasPoweredCar = new GasPoweredCar(10, 4, "Test", "Test");
+        hybridCar = new HybridCar(10, 5, 4, "Test", "Test");
     }
 
     @DisplayName("Car sınıf değişkenleri doğru access modifier değerlerine sahip mi ?")
@@ -146,7 +146,7 @@ public class MainTest {
         assertThat(hybridCar.getName(), instanceOf(String.class));
         assertThat(hybridCar.getDescription(), instanceOf(String.class));
         assertThat(hybridCar.getCylinders(), instanceOf(Integer.class));
-        assertThat(hybridCar.getAvgKmPerLitre(), instanceOf(Double.class))
+        assertThat(hybridCar.getAvgKmPerLitre(), instanceOf(Double.class));
         assertThat(hybridCar.getBatterySize(), instanceOf(Integer.class));
     }
 
